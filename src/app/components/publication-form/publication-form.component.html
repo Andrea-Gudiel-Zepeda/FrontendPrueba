@@ -1,0 +1,37 @@
+<div style="display: flex;">
+
+    <div class="col-md-4 offset-md-2">
+        <div class="card">
+            <div class="card-body">
+                <form action="">
+                    <div class="form-group">
+                        <input type="text" name="title" [(ngModel)]="publication.title" placeholder="Título" class="form-control" autofocus>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                    <textarea name="description" [(ngModel)]="publication.description" placeholder="Descripción" rows="2" class="form-control"></textarea>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <input type="url" name="image" [(ngModel)]="publication.image" placeholder="Imagen" class="form-control">
+                    </div>
+                    <br>
+                    <div class="form-group">
+                    <textarea name="ubication" [(ngModel)]="publication.ubication" placeholder="Ubicacion" rows="2" class="form-control"></textarea>
+                    </div>
+                    <br>
+                    <button class="btn btn-success btn-block" (click)="edit ? updatePublication() : saveNewPublication()">Guardar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card card-body text-center">
+            <img [src]="publication.image">
+            <h3>{{publication.id_publication}}. {{publication.title == '' ? 'Título' : publication.title}}</h3>
+            <p>{{publication.description == '' ? 'Escriba una descripción': publication.description}}</p>
+            <p>{{publication.date | date: 'dd-MM-yyyy'}}</p>
+        </div>
+    </div>
+</div>

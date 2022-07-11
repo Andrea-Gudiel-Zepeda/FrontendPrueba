@@ -5,19 +5,19 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
-import { GameFormComponent } from './components/game-form/game-form.component';
-import { GameListComponent } from './components/game-list/game-list.component';
-
-
 import { HttpClientModule } from '@angular/common/http'
-import { GamesService } from './services/games.service';
+import { ConnectUrlService } from './services/connect-url.service';
+import { PublicationComponent } from './components/publication/publication.component';
+import { PublicationFormComponent } from './components/publication-form/publication-form.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
-    GameFormComponent,
-    GameListComponent
+    PublicationComponent,
+    PublicationFormComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +26,7 @@ import { GamesService } from './services/games.service';
     FormsModule
   ],
   providers: [
-    GamesService
+    ConnectUrlService
   ],
   bootstrap: [AppComponent]
 })

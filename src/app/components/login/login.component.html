@@ -1,0 +1,61 @@
+<!-- Section: Design Block -->
+<section class="">
+    <!-- Jumbotron -->
+    <div class="px-4 py-5 px-md-5 text-center text-lg-start" style="background-color: hsl(0, 0%, 90%); min-height: 40em">
+      <div class="container">
+        <div class="row gx-lg-5 align-items-center" style="margin-top: 4em;">
+          <div class="col-lg-6 mb-5 mb-lg-0" style="text-align: center;">
+            <h1 class="my-5 display-3 fw-bold ls-tight">
+              CONNECT <br />
+              <span class="text-primary">URL</span>
+            </h1>
+            <p style="color: hsl(217, 10%, 50.8%)">
+
+            </p>
+          </div>
+  
+          <div class="col-lg-6 mb-5 mb-lg-0">
+            <div class="card">
+              <div class="card-body py-5 px-md-5">
+                <form>
+                  
+                  <div class="alert alert-danger" role="alert" *ngIf="!isLoggedIn">
+                    Carné incorrecto, intente de nuevo
+                  </div>
+                  <!-- Email input -->
+                  <div class="form-outline mb-4">
+                    <label class="form-label" for="form3Example3" >Carné del Estudiante</label>
+                    <input type="number" id="form3Example3" class="form-control" name="carnet" [(ngModel)]="login.carnet" placeholder="Carné" class="form-control" />
+                    
+                  </div>
+  
+
+                  <div style="width: 100%; text-align: center;">
+                    <br>
+                    <a type="submit" class="btn btn-primary btn-block mb-4" (click)="verify()">
+                        Iniciar Sesión
+                    </a>
+
+   
+                  </div>
+                  <!-- Submit button -->
+                
+                  <!-- Register buttons -->
+                  <div class="text-center">
+                    <p>O inicia sesión con:</p>
+  
+                    <button type="button" class="btn btn-link btn-floating mx-1">
+                      <i class="fab fa-google"></i>
+                    </button>
+
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Jumbotron -->
+  </section>
+  <!-- Section: Design Block -->

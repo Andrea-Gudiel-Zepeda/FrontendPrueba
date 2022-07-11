@@ -1,0 +1,20 @@
+<app-navigation style="margin-bottom: 40px"></app-navigation>
+<div class="col-md-4" *ngFor="let publication of publications">
+    <div class="card text-center">
+        <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center">
+            {{publication.title}}
+            <button class="btn btn-danger" (click)="deletePublication(publication.id_publication)">
+                X
+            </button>
+        </div>
+    </div>
+
+    <img src="{{publication.image}}" class="card-img-top">
+
+
+    <div class="card-body">
+        <p><strong>Ubicación:</strong> {{publication.ubication}}</p>
+        <p>{{publication.description}}</p>
+        <a [routerLink]="['/publication/edit',publication.id_publication]" class="btn btn-info btn-block">Editar Publicación</a>
+    </div>
+</div>
