@@ -11,7 +11,7 @@ import { Observable } from 'rxjs';
 export class ConnectUrlService {
 
   //API_URL = 'http://localhost:3000/api';
-  API_URL = 'https://backend-despliegue.herokuapp.com';
+  API_URL = 'https://backend-despliegue.herokuapp.com/api';
 
   constructor(private http: HttpClient ) { 
   }
